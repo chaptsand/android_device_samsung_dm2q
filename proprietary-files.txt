@@ -153,7 +153,8 @@ vendor/firmware/DM2_S6E3FAC_AMB655AY01.dat
 vendor/etc/nfc/libnfc-nxp_RF.conf
 
 # RIL
-vendor/etc/init/init.vendor.rilcarrier.rc
+vendor/etc/init/init.vendor.rilcommon.rc
+vendor/etc/init/vendor.samsung.rilchip.qcom.rc
 
 # Sensors config
 vendor/etc/sensors/config/kailua_ak991x_1.json
@@ -178,10 +179,14 @@ vendor/firmware/hpbtfw21.tlv
 vendor/firmware/hpnv21.b9a
 vendor/firmware/hpnv21.b9b
 vendor/firmware/hpnv21.baa
+vendor/firmware/hpnv21.bb7
+vendor/firmware/hpnv21.bb9
 vendor/firmware/hpnv21.bin
 vendor/firmware/hpnv21g.b9a
 vendor/firmware/hpnv21g.b9b
 vendor/firmware/hpnv21g.baa
+vendor/firmware/hpnv21g.bb7
+vendor/firmware/hpnv21g.bb9
 vendor/firmware/hpnv21g.bin
 vendor/firmware/mfc/mfc_fw_flash_s2miw04.bin
 
