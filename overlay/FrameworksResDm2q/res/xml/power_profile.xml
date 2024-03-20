@@ -130,6 +130,7 @@
         <value>2726400</value>
         <value>2841600</value>
         <value>2956800</value>
+        <value>3187200</value>
         <value>3360000</value>
     </array>
     <array name="cpu.core_power.cluster2">
@@ -153,6 +154,7 @@
         <value>560</value>
         <value>614</value>
         <value>715</value>
+        <value>1080</value>
         <value>1139</value>
     </array>
     <item name="cpu.suspend">7.5</item>
