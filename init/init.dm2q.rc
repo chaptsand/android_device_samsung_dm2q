@@ -74,6 +74,7 @@ on boot
     chmod 0664 /dev/cpuset/moderate/cgroup.procs
 
     write /proc/sys/vm/swappiness 130
+    write /sys/module/zram/parameters/zram_balance_ratio 0
 
 on shutdown
 
@@ -87,6 +88,9 @@ on post-fs
     chown radio system /efs/carrier
     chown radio system /efs/carrier/HiddenMenu
 
+    #permission for cache reclaim feature
+    chown system system /proc/proc_caches_reclaim
+
 # Pageboostd
 on property:sys.boot_completed=1
     start pageboostd
@@ -98,20 +102,9 @@ service pageboostd /system/bin/pageboostd
     socket pageboostd seqpacket 0660 system system
     disabled
 
-# HEIMDALL
+#Enable MGLRU
 on early-init
-    chmod 0777 /dev/memcg
-    chown system system /dev/memcg
-    chown system system /dev/memcg/cgroup.procs
-
-service heimdalld /system/bin/heimdalld
-    class core
-    user system
-    group system readproc
-    capabilities NET_ADMIN SYS_NICE KILL CHOWN
-    socket heimdalld seqpacket 0660 system system
-    oneshot
-	
+    write /sys/kernel/mm/lru_gen/enabled 7
 
 # some priv-apps of DSH bind mount to DSA priv-apps
 on post-fs-data && property:ro.csc.sales_code=DSA
@@ -139,33 +132,24 @@ on post-fs-data && property:ro.csc.sales_code=DSG
     rmdir /mnt/temp1
     rmdir /mnt/temp2
 
-# add extension priv-apps of DSH bind mount to TMB priv-apps
-on post-fs-data && property:ro.csc.sales_code=TMB
-    umount /system/carrier
-    mkdir /mnt/temp
-    mount none /system/carrier/DSH /mnt/temp bind
-    mount none /system/carrier/TMB /system/carrier bind
-    mount none /mnt/temp/priv-app/SprintAndroidExtension2DSH /system/carrier/priv-app/SprintAndroidExtension2DSH bind
-    umount /mnt/temp
-    rmdir /mnt/temp
-	
-# add extension priv-apps of DSH bind mount to TMK priv-apps
-on post-fs-data && property:ro.csc.sales_code=TMK
-    umount /system/carrier
-    mkdir /mnt/temp
-    mount none /system/carrier/DSH /mnt/temp bind
-    mount none /system/carrier/TMK /system/carrier bind
-    mount none /mnt/temp/priv-app/SprintAndroidExtension2DSH /system/carrier/priv-app/SprintAndroidExtension2DSH bind
-    umount /mnt/temp
-    rmdir /mnt/temp
-	
-# add extension priv-apps of DSH bind mount to ASR priv-apps
+# some priv-apps of TMB bind mount to ASR priv-apps
 on post-fs-data && property:ro.csc.sales_code=ASR
     umount /system/carrier
     mkdir /mnt/temp
-    mount none /system/carrier/DSH /mnt/temp bind
+    mount none /system/carrier/TMB /mnt/temp bind
     mount none /system/carrier/ASR /system/carrier bind
-    mount none /mnt/temp/priv-app/SprintAndroidExtension2DSH /system/carrier/priv-app/SprintAndroidExtension2DSH bind
+    mount none /mnt/temp/priv-app/SprintAndroidExtension2_TMB /system/carrier/priv-app/SprintAndroidExtension2_TMB bind
+    umount /mnt/temp
+    rmdir /mnt/temp
+
+	
+# some priv-apps of TMB bind mount to TMK priv-apps
+on post-fs-data && property:ro.csc.sales_code=TMK
+    umount /system/carrier
+    mkdir /mnt/temp
+    mount none /system/carrier/TMB /mnt/temp bind
+    mount none /system/carrier/TMK /system/carrier bind
+    mount none /mnt/temp/priv-app/SprintAndroidExtension2_TMB /system/carrier/priv-app/SprintAndroidExtension2_TMB bind
     umount /mnt/temp
     rmdir /mnt/temp
 
@@ -180,7 +164,7 @@ on post-fs-data && property:ro.csc.sales_code=DSH
     rmdir /mnt/temp		
 	
 # DCK properties based on target
-# DigitalKey (Supported Country) : KR,US,GB,DE,FR,IT,ES,AE,CH,KZ,SE,VN,ZA,AU,BR,CA,HK,IN,MY,SG,TW
+# DigitalKey (Supported Country) : KR,US,GB,DE,FR,IT,ES,AE,CH,KZ,SE,VN,ZA,AU,BR,CA,HK,IN,MY,SG,TW,SA
 on property:sys.boot_completed=1 && property:ro.csc.countryiso_code=KR
     setprop ro.gms.dck.eligible_wcc 3
 on property:sys.boot_completed=1 && property:ro.csc.countryiso_code=US
@@ -238,4 +222,6 @@ on property:sys.boot_completed=1 && property:ro.csc.countryiso_code=MY
 on property:sys.boot_completed=1 && property:ro.csc.countryiso_code=SG
     setprop ro.gms.dck.eligible_wcc 3
 on property:sys.boot_completed=1 && property:ro.csc.countryiso_code=TW
+    setprop ro.gms.dck.eligible_wcc 3
+on property:sys.boot_completed=1 && property:ro.csc.countryiso_code=SA
     setprop ro.gms.dck.eligible_wcc 3
