@@ -152,12 +152,100 @@ vendor/firmware/ois_mcu_stm32g_fw.bin
 vendor/etc/display/qdcm_calib_data_DM2_S6E3FAC_AMB655AY01.json
 vendor/firmware/DM2_S6E3FAC_AMB655AY01.dat
 
+# Midas
+vendor/etc/midas/deflare/srcb_flare_enhancement.tflite
+vendor/etc/midas/deflare/srcb_flare_estimate.tflite
+vendor/etc/midas_enhancedocumentscan/configs/enhanced_doc_scan_config_enhanceX.json
+vendor/etc/midas_enhancedocumentscan/configs/enhanced_doc_scan_config.json
+vendor/etc/midas_enhancedocumentscan/models/SRIBEnhScan_aiDEBLUR_V300_FP16_SM8550_snpe231.dlc
+vendor/etc/midas_enhancedocumentscan/models/SRIBEnhScan_aiOBJECTINPAINT_V300_FP16_SM8550_snpe231.dlc
+vendor/etc/midas_enhancedocumentscan/models/SRIBEnhScan_aiOBJECTSEGMENT_V300_FP16_SM8550_snpe231.dlc
+vendor/etc/midas_enhancedocumentscan/models/SRIBEnhScan_aiOBJECTSEGMENT_V400_FP16_SM8550_snpe231.dlc
+vendor/etc/midas/midas_config.json
+vendor/etc/midas/moire_detection/moire_detection.tflite
+vendor/etc/midas/SRIBMidas_aiCLARITY2.0_2X_V200_FP16_sm8550_snpe231.dlc
+vendor/etc/midas/SRIBMidas_aiDEBLUR_V140_INT16_sm8550_snpe231.dlc
+vendor/etc/midas/SRIBMidas_aiFACERESTORE_V100_FP16_sm8550_snpe231.dlc
+vendor/etc/midas/SRIBMidas_aiHDR_V600_FP16_sm8550_snpe231.dlc
+vendor/etc/midas/SRIBMidas_aiMOIREREMOVE_Coarse_V900_FP16_sm8550_snpe231.dlc
+vendor/etc/midas/SRIBMidas_aiMOIREREMOVE_Fine_V900_FP16_sm8550_snpe231.dlc
+vendor/etc/midas/SRIBMidas_aiUPSCALER_1X_V200_FP16_sm8550_snpe231.dlc
+vendor/etc/midas/SRIBMidas_aiUPSCALER_2X_V210_FP16_sm8550_snpe231.dlc
+vendor/etc/midas/SRIBMidas_aiUPSCALER_3X_V210_FP16_sm8550_snpe231.dlc
+vendor/etc/midas/SRIBMidas_aiUPSCALER_4X_V210_FP16_sm8550_snpe231.dlc
+vendor/etc/midas/SRIBMQA_aiBLURESTIMATE_V100_FP32.tflite
+vendor/etc/midas/SRIBMQA_aiFiQA_V100_FP32.tflite
+vendor/etc/midas/SRIBMQA_aiIQA_V100_FP32.tflite
+vendor/etc/midas/SRIBMQA_aiNOISEDETECT_V100_FP32.tflite
+
 # NFC
 vendor/etc/nfc/libnfc-nxp_RF.conf
 
 # RIL
 vendor/etc/init/init.vendor.rilcommon.rc
 vendor/etc/init/vendor.samsung.rilchip.qcom.rc
+
+# Saiv
+vendor/etc/saiv/aisolution_1.0/BrightModel-timestamp
+vendor/etc/saiv/aisolution_1.0/CIGSOL_face-hair-seg-v22.06_384_20221106_HTP_FP16.dlc
+vendor/etc/saiv/aisolution_1.0/CIGSOL_lowlight_v9_tunable_HTP_FP16.dlc
+vendor/etc/saiv/aisolution_1.0/CIGSOL_model0915_face_1024_HTP_FP16.dlc
+vendor/etc/saiv/aisolution_1.0/CIGSOL_redrawing_with_quality_v11_HTP_A16W8_cached.dlc
+vendor/etc/saiv/aisolution_1.0/CIGSOL_srcb_face_hair_det_v35_device_lowversion_HTP_FP16.dlc
+vendor/etc/saiv/frc/db/aifrc/aifrc.dlc
+vendor/etc/saiv/frc/db/qfrc/qfrc.dlc
+vendor/etc/saiv/gae/MeanFea.bin
+vendor/etc/saiv/gae/ParaFea.bin
+vendor/etc/saiv/gae/PmAgeFeatSelIdx.bin
+vendor/etc/saiv/gae/PmAgeModel.bin
+vendor/etc/saiv/gae/PmExpFeatSelIdx.bin
+vendor/etc/saiv/gae/PmExpModel.bin
+vendor/etc/saiv/gae/PmGenderFeatSelIdx.bin
+vendor/etc/saiv/gae/PmGenModel.bin
+vendor/etc/saiv/image_understanding/db/af_segmenter/af_segmenter_cnn.dlc
+vendor/etc/saiv/image_understanding/db/af_segmenter/af_segmenter_cnn.info
+vendor/etc/saiv/image_understanding/db/aic_classifier/aic_classifier_cnn.dlc
+vendor/etc/saiv/image_understanding/db/aic_classifier/aic_classifier_cnn.info
+vendor/etc/saiv/image_understanding/db/aic_detector/aic_detector_cnn.dlc
+vendor/etc/saiv/image_understanding/db/aic_detector/aic_detector_cnn.info
+vendor/etc/saiv/image_understanding/db/aic_g_o_detector/aic_g_o_detector_cnn.dlc
+vendor/etc/saiv/image_understanding/db/aic_g_o_detector/aic_g_o_detector_cnn.info
+vendor/etc/saiv/image_understanding/db/aic_g_o_detector/aic_g_o_detector_cnn_system.dlc
+vendor/etc/saiv/image_understanding/db/aic_l_o_detector/aic_l_o_detector_cnn.dlc
+vendor/etc/saiv/image_understanding/db/aic_l_o_detector/aic_l_o_detector_cnn.info
+vendor/etc/saiv/image_understanding/db/slens_classifier/slens_classifier_cnn.dlc
+vendor/etc/saiv/image_understanding/db/slens_detector/slens_detector_cnn.dlc
+vendor/etc/saiv/image_understanding/db/sm_segmenter/sm_segmenter_cnn.dlc
+vendor/etc/saiv/image_understanding/db/sm_segmenter/sm_segmenter_cnn.info
+vendor/etc/saiv/image_understanding/db/SS_segmenter/SS_segmenter_cnn.dlc
+vendor/etc/saiv/image_understanding/db/SS_segmenter/SS_segmenter_cnn.info
+vendor/etc/saiv/personal_1.0/PhotoParsing6_AWB_FACE_256_DSP_iter_300000_v2.4_q.dlc
+vendor/saiv/ainr/db/AINRNetVendor-timestamp
+vendor/saiv/ainr/db/GRAW_3DISP_AI_NR_V5_5_4_832X1072X3_e3188-2.4.3-FP16-sm8550.dlc
+vendor/saiv/image_understanding/db/aig_classifier/aig_classifier_cnn.tflite
+vendor/saiv/image_understanding/db/hdr_verifier/hdr_verifier_cnn.dlc
+vendor/saiv/image_understanding/db/hdr_verifier/hdr_verifier_cnn.info
+vendor/saiv/image_understanding/db/moon_verifier/moon_verifier_cnn.info
+vendor/saiv/image_understanding/db/moon_verifier/moon_verifier_cnn.onnx
+vendor/saiv/image_understanding/db/pet_classifier/pet_classifier_vit.tflite
+vendor/saiv/image_understanding/db/pet_detector/pet_detector_cnn.tflite
+vendor/saiv/image_understanding/db/sce_detector/sce_detector_cnn.tflite
+vendor/saiv/image_understanding/db/smartscan_rectifier/deep_dewarp_cnn.onnx
+vendor/saiv/image_understanding/db/srr_interaction/srr_interaction_cnn.tflite
+vendor/saiv/mpi_model/009/B2BSFNet.dlc
+vendor/saiv/mpi_model/009/B2BSFNet.prototxt
+vendor/saiv/mpi_model/1000/B2BSFNet.dlc
+vendor/saiv/mpi_model/1000/B2BSFNet.prototxt
+vendor/saiv/mpi_model/999/B2BSFNet.dlc
+vendor/saiv/mpi_model/999/B2BSFNet.prototxt
+vendor/saiv/mpi_model/B2BSFNetVendor-timestamp
+vendor/saiv/sr_engine_model/All_mnetv2_mini_p256x256_b16_00834_20210809.tflite
+vendor/saiv/sr_engine_model/nima_crop_pair_v0.0.2_mobilenetv2.tflite
+vendor/saiv/swisp_1.0/db/denoise_model_e214_832X1088X4_v9_4_IS_C3P123_v8_2ref_2_DS_allLosses.dlc
+vendor/saiv/swisp_1.0/db/denoise_model_e3000_832X1088X4_v10.0_S22Realgfjdndm_l115ssim35dists25lpips25.dlc
+vendor/saiv/swisp_1.0/db/denoise_model_e3000_832X1088X4_v9.4_C3P3S22Real_l113ssim35dists25lpips25.dlc
+vendor/saiv/swisp_1.0/db/denoise_model_e3100_832X1088X4_v9.5_TL_S22RealFrontgfrefisp_l115ssim35dists25lpips25.dlc
+vendor/saiv/swisp_1.0/db/SWISPNetVendor-timestamp
 
 # Sensors config
 vendor/etc/sensors/config/kailua_ak991x_1.json
@@ -173,6 +261,29 @@ vendor/bin/factory.ssc
 vendor/lib64/sensors.flicker.so
 vendor/lib64/sensors.grip.so
 vendor/lib64/sensors.ssc.so
+
+# Singletake
+vendor/etc/singletake/aifilter/filter.polarr.db
+vendor/etc/singletake/aifilter/render.polarr.db
+vendor/etc/singletake/aifilter/scene.polarr.db
+vendor/etc/singletake/bestmoment/facedetV2.polarr.db
+vendor/etc/singletake/bestmoment/facedetV3.polarr.db
+vendor/etc/singletake/bestmoment/scoreV2.polarr.db
+vendor/etc/singletake/blink/blink.dlc
+vendor/etc/singletake/Blur/BlurClassifier.dlc
+vendor/etc/singletake/blur_detection/BlurDetectionModel_20210527.tflite
+vendor/etc/singletake/dynamic_viewing/action172_t0_quantized.tflite
+vendor/etc/singletake/dynamic_viewing/DynamicViewingModelHumanDetection.tflite
+vendor/etc/singletake/dynamic_viewing/FaceEngine_model/FERDetModel.dat
+vendor/etc/singletake/dynamic_viewing/FaceEngine_model/FERTrackModel.dat
+vendor/etc/singletake/dynamic_viewing/movinet_t0.tflite
+vendor/etc/singletake/dynamic_viewing/score_model_multi.tflite
+vendor/etc/singletake/jumpshot/ActionShotPose.dlc
+vendor/etc/singletake/jumpshot/ActionShotPosture.dlc
+vendor/etc/singletake/Pet/SRIB_PetFacialAction.dlc
+vendor/etc/singletake/Pet/SR_PetActionClassifier.dlc
+vendor/etc/singletake/Pet/SR_PetPoseEstimator.dlc
+vendor/etc/singletake/saliency/FixPNet.dlc
 
 # Touchscreen firmware
 vendor/firmware/tsp_stm/fts2ba61y_dm2q.bin
