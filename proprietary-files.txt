@@ -195,6 +195,18 @@ vendor/firmware/tsp_stm/fts2ba61y_dm2q.bin
 # VPU firmware
 vendor/firmware/vpu30_4v.mbn
 
+# Vendor firmware - from S9160ZHS4CXH2
+vendor/firmware/CAMERA_ICP.b20:odm/firmware/CAMERA_ICP.b20|49f77dd49489dc8579188e8896d082d907bdbbd7
+vendor/firmware/CAMERA_ICP.mbn:odm/firmware/CAMERA_ICP.mbn|646f222e7918116f17686b14a19909db59c5fa5f
+vendor/firmware/CAMERA_ICP.mdt:odm/firmware/CAMERA_ICP.mdt|9a90448ff8305690ab197a9eb0f8a097018a96b1
+vendor/firmware/a740_zap.b02:odm/firmware/a740_zap.b02|809a8e507e4717e1add8692de6d327cb8efeb07a
+vendor/firmware/a740_zap.mbn:odm/firmware/a740_zap.mbn|c61ca1b9075af794f8bbd0e95946a2ebbfeb7c45
+vendor/firmware/a740_zap.mdt:odm/firmware/a740_zap.mdt|44d4c65bec0c6f0d86a15435705ca35867416497
+vendor/firmware/evass.b19:odm/firmware/evass.b19|d3e46a3e0af782376976ca1c1407f37c8b63ce3d
+vendor/firmware/evass.mbn:odm/firmware/evass.mbn|79380774609a3b2fa6293576c6adcddf94660591
+vendor/firmware/evass.mdt:odm/firmware/evass.mdt|1c0f468e14d10e14c192de36f312047b1db22724
+vendor/firmware/vpu30_4v.mbn:odm/firmware/vpu30_4v.mbn|45e5cf447cc0823739c1387d03b141146bb5d150
+
 # Vendor firmware
 vendor/firmware/hpbtfw21.tlv
 vendor/firmware/hpnv21.b9a
