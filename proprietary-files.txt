@@ -7,6 +7,34 @@ vendor/etc/audconf/OPEN/workspaceFileXml.qwsp
 # Audio configs
 vendor/etc/audio/sku_kalama/mixer_paths.xml
 vendor/etc/dolby/dax-default.xml
+vendor/etc/situation_audio_policy_volumes_sec.xml
+
+# Audio firmware
+vendor/firmware/SoundBoosterParam.bin
+vendor/firmware/cs35l43-bot-dsp1-spk-prot.bin
+vendor/firmware/cs35l43-bot-dsp1-spk-prot.wmfw
+vendor/firmware/cs35l43-rcv-dsp1-spk-prot.bin
+vendor/firmware/cs35l43-rcv-dsp1-spk-prot.wmfw
+vendor/firmware/cs40l26-a2h.bin
+vendor/firmware/cs40l26-calib.bin
+vendor/firmware/cs40l26-calib.wmfw
+vendor/firmware/cs40l26-dvl.bin
+vendor/firmware/cs40l26-svc.bin
+vendor/firmware/cs40l26-svc1.bin
+vendor/firmware/cs40l26-svc2.bin
+vendor/firmware/cs40l26-svc3.bin
+vendor/firmware/cs40l26-wt1.bin
+vendor/firmware/cs40l26-wt2.bin
+vendor/firmware/cs40l26-wt3.bin
+vendor/firmware/cs40l26.bin
+vendor/firmware/cs40l26.wmfw
+vendor/firmware/dax_param.bin
+
+# Audio FX modules
+vendor/lib64/soundfx/libaudiosaplus_sec.so
+vendor/lib64/soundfx/libsamsungSoundbooster_plus.so
+vendor/lib64/soundfx/libswdap.so
+vendor/lib64/soundfx/libswspatializer.so
 
 # Bluetooth firmware
 vendor/firmware/bt_nvm_loading.xml
@@ -123,6 +151,8 @@ vendor/lib64/com.qti.feature2.serializer.so
 vendor/lib64/com.qti.feature2.statsregeneration.so
 vendor/lib64/com.qti.feature2.stub.so
 vendor/lib64/com.qti.feature2.swmf.so
+vendor/lib64/com.qti.settings.sm8550.so
+vendor/lib64/com.qti.stats.common.so
 vendor/lib64/com.qualcomm.mcx.distortionmapper.so
 vendor/lib64/com.qualcomm.mcx.linearmapper.so
 vendor/lib64/com.qualcomm.mcx.nonlinearmapper.so
@@ -141,30 +171,16 @@ vendor/lib64/libcamximageformatutils.so
 vendor/lib64/libcamxswispiqmodule.so
 vendor/lib64/libchifeature2.so
 vendor/lib64/libcom.qti.chinodeutils.so
+vendor/lib64/libhypermotion_interface.so
 vendor/lib64/libthirdparty_zoomtranslator_imp.so
 vendor/lib64/libtriplecam_image_optical_zoom.so
 vendor/lib64/libtriplecam_optical_zoom_control.so
 vendor/lib64/libtriplecam_video_optical_zoom.so
-
-# Camera firmware
-vendor/firmware/CAMERA_ICP.b20
-vendor/firmware/CAMERA_ICP.mbn
-vendor/firmware/CAMERA_ICP.mdt
-vendor/firmware/ois_mcu_stm32g_fw.bin
+vendor/lib64/libvdis.uniplugin@1.0.so
 
 # Display calibration data
 vendor/etc/display/qdcm_calib_data_DM2_S6E3FAC_AMB655AY01.json
 vendor/firmware/DM2_S6E3FAC_AMB655AY01.dat
-
-# EVA firmware
-vendor/firmware/evass.b19
-vendor/firmware/evass.mbn
-vendor/firmware/evass.mdt
-
-# Graphics (Adreno firmware)
-vendor/firmware/a740_zap.b02
-vendor/firmware/a740_zap.mbn
-vendor/firmware/a740_zap.mdt
 
 # NFC
 vendor/etc/nfc/libnfc-nxp_RF.conf
@@ -190,11 +206,11 @@ vendor/lib64/sensors.flicker.so
 vendor/lib64/sensors.grip.so
 vendor/lib64/sensors.ssc.so
 
+# Thermal engine
+vendor/bin/hw/vendor.samsung.hardware.thermal@1.0-service
+
 # Touchscreen firmware
 vendor/firmware/tsp_stm/fts2ba61y_dm2q.bin
-
-# VPU firmware
-vendor/firmware/vpu30_4v.mbn
 
 # Vendor firmware - from S916BXXS6CXHA
 vendor/firmware/CAMERA_ICP.b20:odm/firmware/CAMERA_ICP.b20|a524b53dc0e6898c070752d07c82e6e7f081ae7b
@@ -209,6 +225,15 @@ vendor/firmware/evass.mdt:odm/firmware/evass.mdt|e292735b78f7c054a48cb4ef729c3d2
 vendor/firmware/vpu30_4v.mbn:odm/firmware/vpu30_4v.mbn|df08facc0470bb0d1a387f3fea7bac8bb3d22968
 
 # Vendor firmware
+vendor/firmware/CAMERA_ICP.b20
+vendor/firmware/CAMERA_ICP.mbn
+vendor/firmware/CAMERA_ICP.mdt
+vendor/firmware/a740_zap.b02
+vendor/firmware/a740_zap.mbn
+vendor/firmware/a740_zap.mdt
+vendor/firmware/evass.b19
+vendor/firmware/evass.mbn
+vendor/firmware/evass.mdt
 vendor/firmware/hpbtfw21.tlv
 vendor/firmware/hpnv21.b9a
 vendor/firmware/hpnv21.b9b
@@ -223,6 +248,8 @@ vendor/firmware/hpnv21g.bb7
 vendor/firmware/hpnv21g.bb9
 vendor/firmware/hpnv21g.bin
 vendor/firmware/mfc/mfc_fw_flash_s2miw04.bin
+vendor/firmware/ois_mcu_stm32g_fw.bin
+vendor/firmware/vpu30_4v.mbn
 
 # Wifi firmware
 vendor/firmware/Data.msc
