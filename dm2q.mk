@@ -11,10 +11,10 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 # Inherit from the device configuration.
 $(call inherit-product, device/samsung/dm2q/device.mk)
 
-# Inherit from the Lineage configuration.
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+# Inherit from the Neoteric configuration.
+$(call inherit-product, vendor/neoteric/target/product/neoteric-target.mk)
 
-PRODUCT_NAME := lineage_dm2q
+PRODUCT_NAME := dm2q
 PRODUCT_DEVICE := dm2q
 PRODUCT_BRAND := Samsung
 PRODUCT_MODEL := SM-S9160
