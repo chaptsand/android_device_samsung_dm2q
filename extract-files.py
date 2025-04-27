@@ -15,9 +15,8 @@ from extract_utils.main import (
 
 namespace_imports = [
     'device/samsung/sm8550-common',
-    'hardware/qcom-caf/sm8550',
-    'vendor/qcom/opensource/commonsys-intf/display',
     'vendor/samsung/sm8550-common',
+    'vendor/qcom/common/vendor/display/5.15',
 ]
 
 def lib_fixup_vendor_suffix(lib: str, partition: str, *args, **kwargs):
